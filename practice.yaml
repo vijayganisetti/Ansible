@@ -2,10 +2,21 @@
   hosts: localhost
   become: yes
   vars:
-    name: vijay
-    from: India
-    age: 25
+    name: "vijay"
+    from: "India"
+     age: 25
   tasks:
   - name: declaring and assigning the value
     ansible.builtin.debug:
-      msg: "my  name is {{name}} i am {{from}} i age is {{age}} "
+      msg: "my  name is {{name}} i am {{from}} i age is {{age}}"
+
+- name: variables
+  hosts: localhost
+  vars: #variable declaration
+    Course: "Terraform"
+    Trainer: "Siva"
+    Duration: "15hrs"
+  tasks:
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
