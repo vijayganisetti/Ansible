@@ -3,7 +3,7 @@
   become: yes
   tasks:
    - name: check if user exists
-    anible.builtin.user: id expense
+     ansible.builtin.user: id expense
 
   - name: say hello
     ansible.builtin.debus:
