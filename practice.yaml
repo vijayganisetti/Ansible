@@ -1,13 +1,12 @@
-- name: multi playing with ansible
+- name: declaring the variable
   hosts: localhost
-  tasks: 
-  - name: #play1 and task1
-    ansible.builtin.debug:
-     msg: this is play1 and task1
+  vars:
+    name: vijay
+    from: amp
+    age: 25
 
-- name: play2 and task2
-  hosts: localhost
-  tasks: 
-  - name: #play2 and task1
+  become: yes
+  tasks:
+  - name: declaring and assigning the value
     ansible.builtin.debug:
-     msg: this is play2 and task2
+      msg: "my  name is {{name}} i am {{from}} i age is {{age}}"

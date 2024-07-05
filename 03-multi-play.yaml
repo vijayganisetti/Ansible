@@ -1,15 +1,13 @@
-- name: play1 
-  hosts: web
-  tasks:
-  - name: play1
-    ansible.builtin.debug:
-      msg: "hello from play1"
-
-- name: play2
+- name: multi playing with ansible
   hosts: localhost
-  tasks:
-  - name: play2
+  tasks: 
+  - name: #play1 and task1
     ansible.builtin.debug:
-      msg: "hello from play2"
- 
- 
+     msg: this is play1 and task1
+
+- name: play2 and task2
+  hosts: localhost
+  tasks: 
+  - name: #play2 and task1
+    ansible.builtin.debug:
+     msg: this is play2 and task2
