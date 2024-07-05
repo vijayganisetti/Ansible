@@ -7,7 +7,7 @@
   tasks:
     - name: print the values
       vars:
-        Course: "ansible"
+        Course: "ansible" ##here task file can access the variables
       debug:
         msg: " my course is {{ Course }} my trainer is {{ Trainer }} course duration {{ Duration }}"
 
