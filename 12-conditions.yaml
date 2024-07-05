@@ -1,0 +1,10 @@
+- name: user exists or not 
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: check if user exists
+    anible.builtin.user: id expense
+
+  - name: say hello
+    ansible.builtin.debus:
+    msg: "hello world"  
