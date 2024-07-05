@@ -1,0 +1,15 @@
+- name: varaible declaration in task file
+  hosts: localhost
+  vars:
+    Course: "Terraform"
+    Trainer: "Siva"
+    Duration: "15hrs"
+  tasks:
+    - name: print the values
+      vars:
+        course: "ansible"
+      debug:
+        msg: " my course is {{ Course }} my trainer is {{ Trainer }} course duration {{ Duration }}"
+     - name: print the values
+      debug:
+        msg: " my course is {{ Course }} my trainer is {{ Trainer }} course duration {{ Duration }}"
