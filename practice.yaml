@@ -4,7 +4,7 @@
   vars: #variable declaration
     name: "vijay"
     from: "India"
-     age: "25 years"
+    age: "25 years"
   tasks:
   - name: declaring and assigning the value
     ansible.builtin.debug:
