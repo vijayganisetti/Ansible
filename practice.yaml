@@ -1,6 +1,5 @@
 - name: declaring the variable
   hosts: localhost
-  become: yes
   vars: #variable declaration
     name: "vijay"
     from: "India"
@@ -8,7 +7,7 @@
   tasks:
   - name: declaring and assigning the value
     ansible.builtin.debug:
-      msg: "my  name is {{name}} i am {{from}} i age is {{age}}"
+      msg: "my  name is {{name}} i am {{from}} i age is {{age}}."
 
 - name: variables
   hosts: localhost
