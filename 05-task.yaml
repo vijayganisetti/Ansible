@@ -10,7 +10,7 @@
         course: "ansible"
       debug:
         msg: " my course is {{ Course }} my trainer is {{ Trainer }} course duration {{ Duration }}"
-        
-     - name: print the values
+
+    - name: print the values
       debug:
         msg: " my course is {{ Course }} my trainer is {{ Trainer }} course duration {{ Duration }}"
