@@ -1,8 +1,4 @@
-- name: variables from files
-  hosts: localhost
-  vars_files: ## taking variables from another file (vars.yaml) . this method is used when we lot of varaibles to declare
-  - vars.yaml
-  tasks:
-  - name: print override information
-    ansible.builtin.debug:
-      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
+Course: "DevOps with AWS"
+Trainer: "Sivakumar Reddy M"
+Duration: "3.5 Months"
+#WISHES: "Morning from variable file"
