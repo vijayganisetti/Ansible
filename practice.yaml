@@ -1,12 +1,12 @@
-- name: installing nginx
+- name: multi playing with ansible
   hosts: web
-  become: true
-  tasks:
-  - name: install nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
-  - name: start nginx
-    ansible.builtin.service:
-      name: nginx 
-      state: started      
+  tasks: 
+  - name: #play1 and task1
+    ansible.builtin.debug:
+    msg: this is play1 and task1
+
+- name: play2 and task2
+  hosts: web
+  tasks: 
+  - name: #play2 and task2
+    ansible.builtin.debug
