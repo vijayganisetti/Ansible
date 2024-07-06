@@ -1,0 +1,13 @@
+- name: given number
+  hosts: localhost
+  vars_prompt: 
+  - name: number
+    prompt: "enter the number"
+    tasks: 
+    - name: is less than 10
+      ansible.builtin.debug:
+      msg: "{{number | int<10}}"
+
+    - name: is greater then 10
+      ansible.builtin.debug:
+      msg: "{{number | int>10}}"
